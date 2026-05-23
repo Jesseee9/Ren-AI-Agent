@@ -69,8 +69,4 @@ Standalone diagnostic scripts for:
 ![User in AD](screenshots/User%20in%20AD.jpeg)
 ![User Created](screenshots/User%20Created.jpeg)
 
-## Author
 
-Jesse Adejo
-
-Jesse Adejo
