@@ -1,69 +1,56 @@
-# Ren Agent
+Here’s the rewritten README:
 
-A personal IT operations agent built with Google ADK 2.0.0 and Gemini. Ren automates real IT support tasks — creating Active Directory users, raising ServiceNow incidents, and logging every action to Excel.
+Ren Agent
 
-## What Ren Can Do
+Ren is a personal IT operations agent built with Google ADK and Gemini. It connects to a live Windows Server 2022 environment and automates real IT support tasks — user provisioning, incident management, and audit logging.
 
-- Create, delete, and manage AD users in a Windows Server VM via WinRM
-- Raise, update, and close ServiceNow incidents via REST API
-- Log every operation to an Excel workbook automatically
+This is a living project. It simulates the operational workflows of a 1st and 2nd line IT support role and grows as new capabilities are added.
 
-## Workflow
+What Ren Does
 
-One command triggers the full IT provisioning workflow:
+	•	Creates, deletes, resets, and lists Active Directory users in a Windows Server 2022 VM via WinRM
+	•	Raises, updates, and closes ServiceNow incidents via the Table REST API
+	•	Logs every operation automatically to an Excel workbook with timestamp and outcome
 
-1. AD user created in Windows Server via WinRM
-2. ServiceNow incident raised confirming completion
-3. Action logged to Excel
+Provisioning Workflow
 
-## Supporting Scripts
+One conversational command triggers the full workflow:
 
-Standalone diagnostic scripts for:
-- Entra ID user lookup and licence checks
-- Network diagnostics — ping, DNS, port checks
-- System health — CPU, memory, disk
+	1.	AD user created in Windows Server 2022 (corp.local domain) via WinRM
+	2.	ServiceNow incident raised and linked to the provisioning action
+	3.	Action logged to Excel audit trail with date, type, and result
 
-## Tech Stack
+Supporting Scripts
 
-- Python 3.14
-- Google ADK 2.0.0
-- pywinrm
-- requests
-- openpyxl
+Standalone Python scripts for common IT support tasks:
 
-# Ren Agent
+	•	scripts/entra_id.py — Microsoft Entra ID user lookup, licence check, and account disable via Graph API
+	•	scripts/network_checker.py — ping, DNS lookup, port check
+	•	scripts/system_health.py — CPU, memory, and disk usage reporting
 
-A personal IT operations agent built with Google ADK 2.0.0 and Gemini. Ren automates real IT support tasks — creating Active Directory users, raising ServiceNow incidents, and logging every action to Excel.
+Lab Environment
 
-## What Ren Can Do
+	•	Windows Server 2022 — Active Directory, DNS, DHCP
+	•	Windows 11 VM — managed remotely via RDP
+	•	VMware Workstation — host for both VMs
+	•	ServiceNow Developer Instance — live ticketing environment
+	•	Microsoft Entra ID — cloud identity management via Graph API
 
-- Create, delete, and manage AD users in a Windows Server VM via WinRM
-- Raise, update, and close ServiceNow incidents via REST API
-- Log every operation to an Excel workbook automatically
+Tech Stack
 
-## Workflow
+	•	Python 3.11
+	•	Google ADK 2.1.0
+	•	Gemini
+	•	pywinrm
+	•	microsoft-graph / requests
+	•	openpyxl
+	•	python-dotenv
 
-One command triggers the full IT provisioning workflow:
+Notes
 
-1. AD user created in Windows Server via WinRM
-2. ServiceNow incident raised confirming completion
-3. Action logged to Excel
+.env contains all credentials and is excluded from this repo. Never push credentials to GitHub.
 
-## Supporting Scripts
-
-Standalone diagnostic scripts for:
-- Entra ID user lookup and licence checks
-- Network diagnostics — ping, DNS, port checks
-- System health — CPU, memory, disk
-
-## Tech Stack
-
-- Python 3.14
-- Google ADK 2.0.0
-- pywinrm
-- requests
-- openpyxl
-
+Change Python version to 3.11 once that’s installed. Tell your IDE AI to replace the full README with this. Then push to GitHub.
 ## Screenshots
 
 ![User in AD](screenshots/User%20in%20AD.jpeg)
