@@ -1,10 +1,7 @@
-Here’s the rewritten README:
 
 Ren Agent
 
 Ren is a personal IT operations agent built with Google ADK and Gemini. It connects to a live Windows Server 2022 environment and automates real IT support tasks — user provisioning, incident management, and audit logging.
-
-This is a living project. It simulates the operational workflows of a 1st and 2nd line IT support role and grows as new capabilities are added.
 
 What Ren Does
 
