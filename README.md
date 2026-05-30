@@ -43,14 +43,3 @@ Tech Stack
 	•	openpyxl
 	•	python-dotenv
 
-Notes
-
-.env contains all credentials and is excluded from this repo. Never push credentials to GitHub.
-
-Change Python version to 3.11 once that’s installed. Tell your IDE AI to replace the full README with this. Then push to GitHub.
-## Screenshots
-
-![User in AD](screenshots/User%20in%20AD.jpeg)
-![User Created](screenshots/User%20Created.jpeg)
-
-
